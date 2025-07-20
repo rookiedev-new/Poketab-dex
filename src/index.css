@@ -1,0 +1,6 @@
+@import "tailwindcss";
+*{
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
