@@ -33,7 +33,7 @@ export const Info2 = () => {
     const statscolor = {
       backgroundColor: statcol,
       width: `${s.base_stat}px`,
-      height: "8px",
+      height: "9px",
       display: "inline-block",
     };
 
@@ -63,10 +63,10 @@ export const Info2 = () => {
     }
 
     return (
-      <li key={i} className="m-1 font-bold">
-        <div className="flex items-center m-auto  gap-5 px-5">
-          <div className="w-[60px]">{statLabel}</div>
-          <div className="w-[30px]"> {s.base_stat}</div>
+      <li key={i} className="m-2 font-bold text-xl">
+        <div className="flex items-center m-auto  gap-4 px-5">
+          <div className="w-[70px] text-right">{statLabel}</div>
+          <div className="w-[35px]"> {s.base_stat}</div>
           <div>
             <h3 style={statscolor} className="rounded-xl"></h3>
           </div>
@@ -77,10 +77,10 @@ export const Info2 = () => {
 
   return (
     <div>
-      <h3 className="text-xl font-bold my-1"> Ability: {pokeskill}</h3>
+      <h3 className="text-2xl font-bold my-4"> Ability: {pokeskill}</h3>
 
-      <h3 className="bg-gray-500 m-auto rounded-2xl mx-4 my-2 py-2 h-[220px]">
-        <p className="text-2xl">Stats: </p> <ul>{pokestats}</ul>
+      <h3 className="bg-gray-600 m-auto rounded-2xl mx-4 my-2 p-2 min-h-[250px]">
+        <p className="text-2xl ">Stats: </p> <ul>{pokestats}</ul>
       </h3>
     </div>
   );
