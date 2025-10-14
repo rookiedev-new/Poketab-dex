@@ -6,6 +6,7 @@ export const Info1 = () => {
   const { sprites, name, types } = dataobj;
 
   const pokeimg = sprites.front_default;
+  const pokeimgshiny = sprites.front_shiny;
   const pokename = name;
   const poketype = types.map((t, idx) => {
     let color;
@@ -41,41 +42,42 @@ export const Info1 = () => {
         color = "#f84a68";
         break;
       case "bug":
-        color = "#8aeb19";
+        color = "#c5eb19";
         break;
       case "rock":
-        color = "#795548";
+        color = "#913f3f";
         break;
       case "ghost":
-        color = "#370b36";
+        color = "#510071f9";
         break;
       case "dragon":
-        color = "#673ab7";
+        color = "#530399";
         break;
       case "dark":
-        color = "black";
+        color = "#000000ce";
         break;
       case "steel":
-        color = "silver";
+        color = "#565656";
         break;
       case "fairy":
-        color = "lightpink";
+        color = "pink";
         break;
 
       default:
-        color = "#a4a49e";
-        break;
+        color = "gray";
     }
     const colorshade = {
       border: "3px solid white",
       backgroundColor: color,
+      
+     display: "inline-block", 
     };
 
     return (
       <span
         key={idx}
         style={colorshade}
-        className="text-xl py-2 mx-2 rounded-2xl px-3 text-white"
+        className=" text-3xl rounded-2xl w-32 py-2  mx-2    text-white"
       >
         {t.type.name}
       </span>
@@ -83,18 +85,29 @@ export const Info1 = () => {
   });
 
   return (
-    <div className="relative">
-      <div className="absolute left-[60px] top-[10px] w-[300px] h-[200px] bg-blue-400 rounded-2xl border-4 border-white "></div>
-      <img
-        className="relative left-[100px] w-[220px] h-[220px]"
-        src={pokeimg}
-        alt="img"
-      />
-      <h3 className="text-3xl my-5 sm:my-6">Name:{pokename}</h3>
-      <h3 className="text-3xl my-3 sm:my-4">
-        <span>Type:</span>
-        {poketype}
-      </h3>
+    <div className="  w-2xl mx-auto p-2 ">
+      <div
+        className="  py-2 flex justify-center items-center
+       text-black  gap-6 text-xl"
+      >
+        <div className=" w-1/3 ">
+          <img className="size-[100%] scale-125" src={pokeimg} alt="img" />
+          <h1>Base Form</h1>
+        </div>
+        <div className=" w-1/3">
+          <img src={pokeimgshiny} className="size-[100%] scale-125" alt="img" />
+          <h1>Shiny Form</h1>
+        </div>
+      </div>
+      <div className=" py-2">
+        <h3 className="text-3xl py-2">Name : {pokename}</h3>
+        <h3 className="text-3xl py-2">
+          <span>Type :</span>
+         
+          {poketype}
+          
+        </h3>
+      </div>
     </div>
   );
 };

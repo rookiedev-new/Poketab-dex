@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { Info } from "./context";
 
-export const Info2 = () => {
+const Info2 = () => {
   const dataobj = useContext(Info);
   const { abilities, stats } = dataobj;
 
   const pokeskill = abilities.map((a, idx) => {
     return (
-      <span key={idx} className="px-1">
+      <span key={idx} className="px-2 ">
         {a.ability.name}
       </span>
     );
@@ -32,8 +32,8 @@ export const Info2 = () => {
 
     const statscolor = {
       backgroundColor: statcol,
-      width: `${s.base_stat}px`,
-      height: "9px",
+      width: `${(s.base_stat)/2}%`,
+      height: "11px",
       display: "inline-block",
     };
 
@@ -65,10 +65,11 @@ export const Info2 = () => {
     return (
       <li key={i} className="m-2 font-bold text-xl">
         <div className="flex items-center m-auto  gap-4 px-5">
-          <div className="w-[70px] text-right">{statLabel}</div>
+          <div className="w-[80px] text-right ">{statLabel}</div>
           <div className="w-[35px]"> {s.base_stat}</div>
-          <div>
-            <h3 style={statscolor} className="rounded-xl"></h3>
+          <div className=" w-[80%] flex ">
+            <h3  style={statscolor} className="rounded-xl 
+             shadow-md shadow-black"></h3>
           </div>
         </div>
       </li>
@@ -76,12 +77,17 @@ export const Info2 = () => {
   });
 
   return (
-    <div>
-      <h3 className="text-2xl font-bold my-4"> Ability: {pokeskill}</h3>
+    <div className=" mx-auto p-1">
+      <h3 className="text-3xl font-bold py-2"> Ability :{pokeskill}</h3>
 
-      <h3 className="bg-gray-600 m-auto rounded-2xl mx-4 my-2 p-2 min-h-[250px]">
-        <p className="text-2xl ">Stats: </p> <ul>{pokestats}</ul>
-      </h3>
+      <div className="bg-gray-800  m-auto 
+       shadow-2xl shadow-black rounded-2xl w-lg p-2">
+        <p className="text-4xl ">Stats: </p>
+         <ul>{pokestats}</ul>
+      </div>
     </div>
+
   );
 };
+
+export default Info2;
