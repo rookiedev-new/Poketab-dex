@@ -69,15 +69,15 @@ export const Info1 = () => {
     const colorshade = {
       border: "3px solid white",
       backgroundColor: color,
-      
-     display: "inline-block", 
+
+      display: "inline-block",
     };
 
     return (
       <span
         key={idx}
         style={colorshade}
-        className=" text-3xl rounded-2xl w-32 py-2  mx-2    text-white"
+        className="text-2xl md:text-3xl rounded-2xl w-28 md:w-32 py-1  mx-1    text-white"
       >
         {t.type.name}
       </span>
@@ -100,13 +100,8 @@ export const Info1 = () => {
         </div>
       </div>
       <div className=" py-2">
-        <h3 className="text-3xl py-2">Name : {pokename}</h3>
-        <h3 className="text-3xl py-2">
-          <span>Type :</span>
-         
-          {poketype}
-          
-        </h3>
+        <h3 className="text-3xl ">Name : {pokename}</h3>
+        <h3 className="text-3xl pt-4">Type :{poketype}</h3>
       </div>
     </div>
   );
