@@ -77,7 +77,7 @@ export const Info1 = () => {
       <span
         key={idx}
         style={colorshade}
-        className="text-2xl md:text-3xl rounded-2xl w-28 md:w-32 py-1  mx-1    text-white"
+        className="text-2xl md:text-3xl rounded-2xl w-28 md:w-32 py-1 mx-1    text-white"
       >
         {t.type.name}
       </span>
