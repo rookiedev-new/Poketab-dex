@@ -80,7 +80,7 @@ function App() {
           </div>
           {!poke && errormsg && (
             <div
-              className=" bg-red-600 rounded-3xl w-2xl flex
+              className=" bg-red-600 rounded-3xl md:w-xl flex
              justify-center items-center m-auto h-20 mt-12  p-4
              shadow-black shadow-lg
              "
