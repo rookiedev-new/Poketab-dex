@@ -55,7 +55,7 @@ Error generating stack: `+u.message+`
            justify-center mt-2  items-center gap-5`,children:[Q.jsx("input",{type:"text",ref:B,onKeyDown:I=>{I.key==="Enter"&&j()},className:`bg-white text-black
               shadow-black  shadow-xl
              border-none  w-md h-10  text-xl`}),Q.jsx("button",{onClick:j,className:`bg-red-600 
-               w-20 h-10 text-xl rounded-lg text-white hover:scale-110 duration-300 transition-all`,children:"Catch"}),Q.jsx("div",{className:"bg-green-500 text-2xl w-72 border-2  p-2 rounded-xl",children:Q.jsx("h2",{children:"Serch for a pokemon name or using its id."})})]}),!M&&K&&Q.jsx("div",{className:` bg-red-600 rounded-3xl w-2xl flex
+               w-20 h-10 text-xl rounded-lg text-white hover:scale-110 duration-300 transition-all`,children:"Catch"}),Q.jsx("div",{className:"bg-green-500 text-2xl w-72 border-2  p-2 rounded-xl",children:Q.jsx("h2",{children:"Serch for a pokemon name or using its id."})})]}),!M&&K&&Q.jsx("div",{className:` bg-red-600 rounded-3xl md:w-xl flex
              justify-center items-center m-auto h-20 mt-12  p-4
              shadow-black shadow-lg
              `,children:Q.jsx("h3",{className:`text-amber-100 text-4xl 
